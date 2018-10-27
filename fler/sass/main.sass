@@ -1,0 +1,720 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+
+.hamburger
+	position: absolute
+	top: 34px
+	right: 0
+	z-index: 1
+	
+.hamburger-box
+	width: 34px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	border-radius: 0
+	width: 34px
+	height: 2px
+	background-color: #fff
+			
+.mm-navbar
+	height: auto
+	position: relative
+	border: none
+	.mm-title 
+		padding: 0
+		img
+			width: 128px
+			height: auto
+			margin: 10px 0 35px
+
+.mm-panels>.mm-panel:after, .mm-panels>.mm-panel:before
+	height: 0
+
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
+	margin-top: 0
+
+html.mm-opened
+	overflow-y: scroll
+.mm-panels > .mm-panel.mm-hasnavbar
+	right: -18px
+.mm-listview>li:not(.mm-divider):after
+	display: none
+.mm-menu.mm-theme-black .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview > li.mm-selected > span 
+	background-color: transparent
+	color: $accent
+
+.mm-listview
+	> li
+		> a
+			transition: color .25s ease
+			padding: 
+			left: 14%
+			right: 14%
+			top: 8px
+			&:hover
+				color: $accent
+			&::before
+				color: $accent
+			&::before
+				content: '\f219'
+				font-family: fontawesome
+				margin-right: 8px
+				text-decoration: none
+				font-size: 12px
+				color: #f8f8f8
+				transition: color .25s ease
+		&.active
+			&>a
+				color: $accent
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+
+.site-header
+	position: relative
+	width: 100%
+	height: 100vh
+	background-size: cover
+.top-header-bg
+	background-color: #0B3430
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		border-bottom: 1px solid #EDE7C7
+		width: 100%
+		height: 1px
+.top-ind
+	padding-top: 70px
+	padding-bottom: 70px
+.top-header-ind
+	padding-top: 30px
+
+
+.top-header
+	position: relative
+	.logo
+		width: 60px
+		height: auto
+		position: relative
+		bottom: 4px
+		img
+			width: 100%
+			height: 100%
+	h1
+		display: inline-block
+		font-size: 30px
+		text-transform: uppercase
+		letter-spacing: 5px
+		margin-left: 5px
+		color: #EDE7C7
+.top-header-info
+	text-align: right
+
+	p
+		font-weight: 400
+		color: #EDE7C7
+		font-size: 18px
+		display: inline-block
+		margin-left: 30px
+		line-height: 56px
+
+
+.bot-header-bg
+	background-color: #0B3430
+.top-header-social
+	padding-top: 2px
+	text-align: right
+	ul, li
+		margin: 0
+		padding: 0
+		display: inline-block
+		a
+			display: block
+			border: 1px solid #EDE7C7
+			border-radius: 50%
+			line-height: 18px
+			margin-left: 10px
+			transition: ease .25s
+			&:hover
+				text-decoration: none
+				border: 1px solid #F6EAA5
+
+
+.bot-header
+	.header-menu
+		padding-top: 7px
+		text-align: right
+		ul, li
+			margin: 0
+			padding: 0
+			list-style-type: none
+			display: inline-block
+			a
+				display: block
+				color: #EDE7C7
+				font-size: 16px
+				margin-right: 15px
+				transition: ease .25s
+				&:hover
+					text-decoration: none
+					color: #F6EAA5
+
+.bot-header-ind
+	padding-top: 20px
+	padding-bottom: 20px
+
+.button-header
+	text-align: right
+	a
+		display: inline-block
+		text-transform: uppercase
+		color: #EDE7C7
+		background-color: transparent
+		border: 1px solid #EDE7C7
+		padding: 5px 15px
+		border-radius: 3px
+		transition: ease .25s
+		&:hover
+			text-decoration: none
+			border: 1px solid #F6EAA5
+			color: #F6EAA5
+		&:active
+			transform: translateY(2px)
+
+
+.viem
+	position: relative
+	width: 100%
+	min-height: 550px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #3d3c3c
+		opacity: .9
+		width: 100%
+		height: 100%
+
+
+.fotorama
+	padding: 12.5% 0 0 0
+	&__active
+		.fotorama__thumb
+			border-color: #3d3c3c
+.fotorama__nav
+	&-wrap
+		position: absolute
+		bottom: 15px
+		padding: 0 30px
+		width: 100%
+.fotorama__thumb
+	transition: border-color .5s ease
+	&-border
+		border-color: #EDE7C7
+
+.viem-left-block
+	padding: 30% 0
+	p
+		padding-top: 10px
+		font-weight: 300
+		font-size: 15px
+		color: #fff
+		text-align: center
+.h2
+	font-weight: 700
+	font-size: 26px
+	color: #fff
+	text-transform: uppercase
+	letter-spacing: 4px
+	text-align: center
+	span
+		color: #EDE7C7
+
+
+.prices
+	position: relative
+	background-color: #0B3430
+	min-height: 450px
+	h2
+		position: relative
+		text-align: center
+		&::before
+			content: ''
+			position: absolute
+			width: 1px
+			height: 160px
+			top: 170px
+			right: 0
+			left: 0
+			bottom: 0
+			background-color: #EDE7C7
+			margin: auto
+
+.prices-ind
+	padding-top: 50px
+	padding-bottom: 30px
+
+.prices-left
+	position: relative
+
+
+
+
+.no-gutters
+  margin-right: 0
+  margin-left: 0
+
+
+.prices-left
+	text-align: left
+	h3
+		font-size: 18px
+		text-transform: uppercase
+		color: #fff
+		display: inline-block
+		width: 100%
+		padding-bottom: 20px
+	span
+		position: absolute
+		right: 40px
+
+
+.prices-right
+	position: relative
+	text-align: left
+	left: 40px
+	h3
+		font-size: 18px
+		text-transform: uppercase
+		color: #fff
+		display: inline-block
+		width: 100%
+		padding-bottom: 20px
+	span
+		position: absolute
+		right: 40px
+			
+.button-prices
+	text-align: center
+	a
+		display: inline-block
+		color: #EDE7C7
+		background-color: transparent
+		border: 1px solid #EDE7C7
+		padding: 5px 15px
+		border-radius: 3px
+		transition: ease .25s
+		text-transform: uppercase
+		&:hover
+			text-decoration: none
+			border: 1px solid #F6EAA5
+			color: #F6EAA5
+		&:active
+			transform: translateY(2px)
+
+
+.master
+	position: relative
+	min-height: 700px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background-color: #333
+		opacity: .9
+	h2
+		padding-bottom: 30px
+	h3
+		font-size: 20px
+		color: #fff
+	p
+		font-size: 16px
+		color: #fff
+
+
+.master-img
+	padding-top: 6%
+
+.slider-area
+	img
+		width: 100%
+
+
+
+.no-gutters
+  margin-right: 0
+  margin-left: 0
+  > .col,
+  > [class*="col-"]
+    padding-right: 0
+    padding-left: 0
+
+
+.port-item-cont
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	width: 100.2%
+	height: 100%
+	padding-top: 15%
+	text-align: center
+	opacity: 0
+	background-color: #333
+	transition: ease .25s
+	&:hover
+		opacity: .9
+		padding-top: 20%
+	i
+		font-size: 22px
+		text-align: center
+		color: #fff
+	a
+		display: inline-block
+	h3
+		font-size: 16px
+		color: #fff
+		margin-top: 10px
+	p
+		padding: 0
+		color: #fff
+		font-weight: 300
+
+.port_descr
+	background-color: #fff
+	max-width: 800px
+	margin: auto
+	p, h3
+		padding: 20px
+		padding-bottom: 0
+		color: #333
+	h3
+		margin-bottom: 10px
+		text-align: center
+		text-transform: uppercase
+		font-weight: 500
+		color: #333
+	p
+		font-weight: 300
+		margin-top: 0
+		color: #333
+	img
+		width: 100%
+		margin-top: 20px
+
+.port_descr
+	position: relative
+
+.slider-area
+	.owl-dot
+		margin-top: 50px
+
+
+
+
+.advantages
+	background-color: #0B3430
+	min-height: 400px
+	.advantages-item-ind
+		padding-top: 50px
+
+.advantages-item
+	text-align: center
+	.advantages-item-img
+		width: 100px
+		height: 100px
+		border: 1px solid #fff
+		border-radius: 50%
+		line-height: 100px
+		margin: auto
+		img
+			width: 50px
+			height: 50px
+			color: #fff
+	span
+		font-size: 30px
+	p
+		font-size: 16px
+	strong
+		font-size: 20px
+
+.request
+	position: relative
+	min-height: 480px
+	.request-left-block
+		img
+			width: 100%
+	.request-right-block
+		position: relative
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-repeat: no-repeat
+		&::before
+			content: ''
+			position: absolute
+			background-color: #333
+			opacity: .9
+			width: 100%
+			height: 100%
+	.container-fluid
+		padding: 0
+.request-right-ind
+	padding-top: 150px
+	padding-bottom: 150px
+	padding-left: 50px
+	z-index: 2
+	position: relative
+.request-right-text
+	position: relative
+	h1
+		font-size: 30px
+		font-weight: 400
+		color: #EDE7C7
+		letter-spacing: 10px
+		text-transform: uppercase
+	h2
+		font-size: 18px
+		font-weight: 400
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 2px
+	p
+		font-size: 16px
+		color: #fff
+		font-weight: 300
+
+.request-right-form
+	padding-top: 10px
+	input
+		background-color: transparent
+		border: #EDE7C7 1px solid
+		border-radius: 2px
+		padding: 8px 22px
+		outline: 0
+		color: #fff
+		display: inline-block
+		font-weight: 300
+		font-size: 16px
+		width: 50%
+		margin-bottom: 20px
+		&::placeholder
+			color: #fff
+
+.button-request
+	text-align: center
+	padding-top: 10px
+	a
+		display: inline-block
+		color: #EDE7C7
+		background-color: transparent
+		border: 1px solid #EDE7C7
+		padding: 5px 15px
+		border-radius: 3px
+		transition: ease .25s
+		text-transform: uppercase
+		&:hover
+			text-decoration: none
+			border: 1px solid #F6EAA5
+			color: #F6EAA5
+		&:active
+			transform: translateY(2px)
+
+
+
+.reviews
+	position: relative
+	min-height: 600px
+	background-size: cover
+	background-position: center center
+	&::before
+		content: ''
+		position: absolute
+		background-color: #333
+		opacity: .9
+		width: 100%
+		height: 100%
+
+.carousel-reviews-item
+	text-align: center
+	padding-top: 50px
+	h1
+		font-size: 22px
+		margin: 0
+	span
+		font-size: 14px
+		display: block
+		margin-bottom: 15px
+	.fas
+		color: #F6EAA5
+		margin-right: 3px
+		margin-bottom: 35px
+	p
+		font-size: 16px
+		font-weight: 300
+		margin-bottom: 70px
+
+.owl-theme .owl-nav [class*="owl-"]
+	background-color: transparent
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+	background-color: #F6EAA5
+.carousel-reviews
+	.owl-prev
+		position: absolute
+		top: 200px
+		left: 0
+		.fa
+			font-size: 30px
+	.owl-next
+		position: absolute
+		top: 200px
+		right: 0
+		.fa
+			font-size: 30px
+.owl-theme .owl-nav [class*="owl-"]:hover
+	background-color: transparent
+	color: #F6EAA5
+
+
+.footer
+	position: relative
+	min-height: 350px
+	background-color: #0B3430
+	.logo
+		width: 60px
+		height: auto
+		position: relative
+		bottom: 4px
+		img
+			width: 100%
+			height: 100%
+	.footer-logo-block
+		h1
+			display: inline-block
+			font-size: 30px
+			text-transform: uppercase
+			letter-spacing: 5px
+			margin-left: 5px
+			color: #EDE7C7
+		p
+			margin-left: 10px
+			color: #EDE7C7
+
+.footer-social
+	padding-top: 20px
+	text-align: left
+	ul, li
+		margin: 0
+		padding: 0
+		display: inline-block
+		.fab
+				font-size: 18px
+				color: #EDE7C7
+				display: block
+				padding: 10px
+				&:hover
+					color: #F6EAA5
+		.fa-instagram
+			padding: 10px 12px
+		a
+			display: block
+			border: 1px solid #EDE7C7
+			border-radius: 50%
+			line-height: 18px
+			margin-left: 10px
+			transition: ease .25s
+			&:hover
+				text-decoration: none
+				border: 1px solid #F6EAA5
+
+
+.footer-mnu
+	padding-top: 7px
+	text-align: left
+	ul, li
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: block
+		text-decoration: underline
+		color: #EDE7C7
+		a
+			display: block
+			color: #EDE7C7
+			font-size: 16px
+			margin-right: 15px
+			transition: ease .25s
+			&:hover
+				text-decoration: none
+				color: #F6EAA5
+
+.footer-adr
+	text-align: center
+	padding-top: 8px
+	p
+		color: #EDE7C7
+	h2
+		font-size: 20px
+		color: #EDE7C7
+		font-weight: 400
+
+.button-footer
+	text-align: center
+
+.footer-map
+	iframe
+		width: 100%
+		height: 220px
+
+
+@import "media" // Always at the end
