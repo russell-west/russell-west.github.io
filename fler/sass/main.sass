@@ -105,8 +105,6 @@ html.mm-opened
 b, strong
 	font-weight: bold
 
-a:active, a:focus
-  outline: none
 
 
 .site-header
@@ -130,11 +128,8 @@ a:active, a:focus
 	padding-top: 30px
 
 
-
-
 .top-header
 	position: relative
-	color: #EDE7C7
 	.logo
 		width: 60px
 		height: auto
@@ -150,12 +145,20 @@ a:active, a:focus
 		letter-spacing: 5px
 		margin-left: 5px
 		color: #EDE7C7
-	p
+.top-header-info
+	text-align: right
+	span, p
+		font-weight: 400
 		color: #EDE7C7
-
-
-
-
+		font-size: 18px
+		display: inline-block
+		line-height: 56px
+	img
+		width: 22px
+		margin-left: 30px
+		margin-right: 5px
+		position: relative
+		bottom: 2px
 
 
 .bot-header-bg
@@ -163,51 +166,24 @@ a:active, a:focus
 .top-header-social
 	padding-top: 2px
 	text-align: right
-	color: #EDE7C7
 	ul, li
 		margin: 0
 		padding: 0
 		display: inline-block
 		a
 			display: block
-			text-align: center
+			border: 1px solid #EDE7C7
+			border-radius: 50%
+			line-height: 18px
 			margin-left: 10px
 			transition: ease .25s
+			padding: 10px
 			&:hover
 				text-decoration: none
+				border: 1px solid #F6EAA5
 	img
-		margin-left: 30px
-	p
-		color: #EDE7C7
-	h2
-		color: #EDE7C7
-	.fab
-		font-size: 18px
-		color: #EDE7C7
-		transition: ease .25s
-		&:hover
-			color: #F6EAA5
-	i
-		width: 40px
-		height: 40px
-		border: 1px solid #EDE7C7
-		border-radius: 50%
-		line-height: 37px
-		transition: ease .25s
-		&:hover
-			border: 1px solid #F6EAA5
-
-
-.mobile
-	@extend %fa-icon
-	@extend .fas
-	&::before
-		content: fa-content($fa-var-mobile-alt)
-		font-size: 18px
-		color: #EDE7C7
-		transition: ease .25s
-		&:hover
-			color: #F6EAA5
+		width: 22px
+			
 
 
 .bot-header
@@ -447,9 +423,12 @@ a:active, a:focus
 		opacity: .9
 		padding-top: 20%
 	i
+		width: 22px
 		font-size: 22px
 		text-align: center
 		color: #fff
+		img
+			width: 22px!important
 	a
 		display: inline-block
 	h3
@@ -704,10 +683,13 @@ a:active, a:focus
 			border-radius: 50%
 			line-height: 18px
 			margin-left: 10px
+			padding: 10px
 			transition: ease .25s
 			&:hover
 				text-decoration: none
 				border: 1px solid #F6EAA5
+	img
+		width: 22px
 
 
 .footer-mnu
@@ -739,14 +721,8 @@ a:active, a:focus
 		font-size: 20px
 		color: #EDE7C7
 		font-weight: 400
-		display: inline-block
-	i
-		font-size: 20px
-		color: #EDE7C7
-		display: inline-block
 	img
-		display: inline-block
-		margin-bottom: 2px
+		width: 25px
 
 .button-footer
 	text-align: center
@@ -755,6 +731,13 @@ a:active, a:focus
 	iframe
 		width: 100%
 		height: 220px
+
+
+
+
+
+
+
 
 
 @import "media" // Always at the end
