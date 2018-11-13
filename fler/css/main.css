@@ -11682,10 +11682,11 @@ a:active, a:focus {
     color: #fff;
     display: inline-block;
     padding-bottom: 20px;
-    font-weight: 400; }
+    font-weight: 300; }
 
 .prices-left span, .prices-right span {
-  float: right; }
+  float: right;
+  font-weight: 300; }
 
 .button-prices {
   text-align: center; }
@@ -11700,7 +11701,8 @@ a:active, a:focus {
     -webkit-transition: ease .25s;
     -o-transition: ease .25s;
     transition: ease .25s;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 300; }
     .button-prices a:hover {
       text-decoration: none;
       border: 1px solid #F6EAA5;
@@ -11757,7 +11759,8 @@ a:active, a:focus {
   padding-top: 10px; }
   .master-skills ul li {
     line-height: 36px;
-    display: block; }
+    display: block;
+    font-weight: 300; }
 
 .master-skills .fas {
   margin-right: 5px;
@@ -11989,8 +11992,7 @@ input:invalid {
     -webkit-transition: ease .25s;
     -o-transition: ease .25s;
     transition: ease .25s;
-    text-transform: uppercase;
-    font-weight: 300; }
+    text-transform: uppercase; }
     .button-request a:hover {
       text-decoration: none;
       border: 1px solid #F6EAA5;
@@ -12076,7 +12078,8 @@ input:invalid {
     color: #EDE7C7; }
   .footer .footer-logo-block p {
     margin-left: 10px;
-    color: #EDE7C7; }
+    color: #EDE7C7;
+    font-weight: 300; }
 
 .footer-social {
   padding-top: 20px;
@@ -12117,7 +12120,8 @@ input:invalid {
     list-style-type: none;
     display: block;
     text-decoration: underline;
-    color: #EDE7C7; }
+    color: #EDE7C7;
+    font-weight: 300; }
     .footer-mnu ul a, .footer-mnu li a {
       display: block;
       color: #EDE7C7;
@@ -12125,20 +12129,23 @@ input:invalid {
       margin-right: 15px;
       -webkit-transition: ease .25s;
       -o-transition: ease .25s;
-      transition: ease .25s; }
+      transition: ease .25s;
+      font-weight: 300; }
       .footer-mnu ul a:hover, .footer-mnu li a:hover {
         text-decoration: none;
         color: #F6EAA5; }
 
 .footer-adr {
   text-align: center;
-  padding-top: 8px; }
+  padding-top: 8px;
+  font-weight: 300; }
   .footer-adr p {
-    color: #EDE7C7; }
+    color: #EDE7C7;
+    font-weight: 300; }
   .footer-adr h2 {
     font-size: 20px;
     color: #EDE7C7;
-    font-weight: 400;
+    font-weight: 700;
     display: inline-block; }
   .footer-adr i {
     font-size: 20px;
