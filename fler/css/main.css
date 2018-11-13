@@ -11681,7 +11681,8 @@ a:active, a:focus {
     text-transform: uppercase;
     color: #fff;
     display: inline-block;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    font-weight: 400; }
 
 .prices-left span, .prices-right span {
   float: right; }
@@ -11699,7 +11700,8 @@ a:active, a:focus {
     -webkit-transition: ease .25s;
     -o-transition: ease .25s;
     transition: ease .25s;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 400; }
     .button-prices a:hover {
       text-decoration: none;
       border: 1px solid #F6EAA5;
